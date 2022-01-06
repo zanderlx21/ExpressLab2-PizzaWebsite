@@ -3,31 +3,44 @@ import Pizza from "../models/pizza"
 
 const pizzaRoutes = express.Router();
 
-const specialtyPizzas: Pizza[] = [
-{
-    id: 1, 
-    name: "Sushi-Za", 
-    toppings: ["Cream Cheese", "Salmon", "Onions"]
-},
-{
-    id: 2, 
-    name: "Burger-Za", 
-    toppings: ["Cheddar Cheese", "Ground Beef", "Mushrooms"]
-},
-{
-    id: 3, 
-    name: "Crab-Za", 
-    toppings: ["White Cheese", "Crab", "capers"]
-},
-]; 
-let nextID: number = 4
+// const specialtyPizzas: Pizza[] = [
+// {
+//     id: 1, 
+//     name: "Sushi-Za", 
+//     price: 17
+// },
+// {
+//     id: 2, 
+//     name: "Burger-Za", 
+//     price: 12
+// },
+// {
+//     id: 3, 
+//     name: "Crab-Za", 
+//     price: 16
+// },
+// ]; 
+// let nextID: number = 4
 
-pizzaRoutes.get("/", function (req, res) {
+pizzaRoutes.get("/home", function (req, res) {
     res.render("home");
 })
 
-// pizzaRoutes.get("/pizza-list", function (req, res) {
-//     res.render("home")
-// })
+pizzaRoutes.get("/specialty-pizza", function (req, res) {
+    let name = req.query.name as string;
+    let rating = req.query.rating as string;
+    res.render("specialty-pizza", {name, rating})
+});
 
-export default pizzaRoutes;
+pizzaRoutes.get("/review", function (req, res) {
+    res.render("review")
+});
+
+pizzaRoutes.post("/confirmation", function (req, res) {
+    let name = req.body.name as string;
+    let comment = req.body.comment as string;
+    let rating = req.body.rating as string;
+    res.render("confirmation", {name, rating, comment})
+});
+export default pizzaRoutes
+

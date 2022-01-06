@@ -1,7 +1,7 @@
 interface Pizza {
     id: number;
     name: string;
-    toppings: string[];
+    price: number;
 }
 
 export default Pizza

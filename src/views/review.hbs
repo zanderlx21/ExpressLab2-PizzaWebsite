@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+</head>
+<body>
+    <h1>Leave a review!</h1>
+    <Form action="/confirmation" method="POST">
+        Name: <input type="text" name="name"> <br>
+        <label for="review">Comment:</label><br><textarea name="comment" id="review" cols="50" rows="3" placeholder="Enter your review!"></textarea>
+
+        <h2> Rating</h2>
+        <input type="radio" name="rating" value="5"><label for="5">5 (best)</label>
+        <input type="radio" name="rating" value="4"><label for="4">4</label>
+        <input type="radio" name="rating" value="3"><label for="3">3</label>
+        <input type="radio" name="rating" value="2"><label for="2">2</label>
+        <input type="radio" name="rating" value="1"><label for="1">1</label>
+        <br>
+        <input type="submit">
+    </Form>
+
+    <a href="/home">Never Mind</a>
+</body>
+</html>
