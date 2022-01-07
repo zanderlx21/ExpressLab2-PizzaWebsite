@@ -1,0 +1,22 @@
+@font-face {
+
+    font-family: McLaren;
+    
+    src: url(McLaren-Regular.ttf);
+    
+    }
+
+body {
+    background-color: lightcyan;
+    font-family: McLaren;
+}
+
+#freeDelivery {
+    color: Red;
+}
+
+#pizza-icon {
+    padding-left: 15px;
+    height: 40px;
+    width: 40px;
+}

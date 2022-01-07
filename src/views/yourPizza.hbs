@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Custom Pizza!</title>
+  </head>
+  <body>
+    <h1>Your Pizza<img src="PizzaPie.png" id="pizza-icon"></h1>
+    <p>Size: {{size}}</p>
+
+    <p>Toppings: {{toppings}}</p>
+
+    <p>Gluten-Free Crust: {{checkbox}}</p>
+
+    <p>Special Instructions: {{instructions}}</p>
+
+    <p>Price: {{price}}</p>
+
+    {{#if freeDelivery}}
+      <h3 id="freeDelivery">Because your order meets the $15.00 minimum, you get FREE DELIVERY!</h3>
+    {{/if}}
+    <a href="/customPizza">Build another pizza</a>
+    |
+    <a href="/home">Back to Homepage</a>
+  </body>
+</html>
